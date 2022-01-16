@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>tags | Hexo</title>
+  <title>树莓派从吃灰到吃灰 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://example.com/tags/index.html">
+  <meta name="description" content="1.树莓派环境配置1.1镜像下载https:&#x2F;&#x2F;www.raspberrypi.org&#x2F;software&#x2F;operating-systems&#x2F;#raspberry-pi-os-32-bit 在官网任选一类镜像下载即可 1.2镜像烧写所需工具：高速SD卡（&gt;4G），读卡器，SD卡格式化程序SD Card Formatter，镜像烧写程序Win32DiskImager.exe。 步骤：将SD卡插">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派从吃灰到吃灰">
+<meta property="og:url" content="http://example.com/2021/09/12/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BB%8E%E5%90%83%E7%81%B0%E5%88%B0%E5%90%83%E7%81%B0/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.树莓派环境配置1.1镜像下载https:&#x2F;&#x2F;www.raspberrypi.org&#x2F;software&#x2F;operating-systems&#x2F;#raspberry-pi-os-32-bit 在官网任选一类镜像下载即可 1.2镜像烧写所需工具：高速SD卡（&gt;4G），读卡器，SD卡格式化程序SD Card Formatter，镜像烧写程序Win32DiskImager.exe。 步骤：将SD卡插">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-08-17T17:40:01.000Z">
-<meta property="article:modified_time" content="2021-08-17T17:44:54.499Z">
+<meta property="article:published_time" content="2021-09-12T05:53:38.000Z">
+<meta property="article:modified_time" content="2022-01-01T13:34:38.102Z">
 <meta property="article:author" content="Haojie Zhao">
 <meta name="twitter:card" content="summary">
   
@@ -158,27 +160,111 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="tags-" class="article article-type-tags " itemscope itemprop="blogPost">
+            <article id="post-树莓派从吃灰到吃灰" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      tags
+      树莓派从吃灰到吃灰
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2021-08-17T17:40:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-18</time>
+        <a href="/2021/09/12/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BB%8E%E5%90%83%E7%81%B0%E5%88%B0%E5%90%83%E7%81%B0/" class="archive-article-date">
+  	<time datetime="2021-09-12T05:53:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="1-树莓派环境配置"><a href="#1-树莓派环境配置" class="headerlink" title="1.树莓派环境配置"></a>1.树莓派环境配置</h2><h3 id="1-1镜像下载"><a href="#1-1镜像下载" class="headerlink" title="1.1镜像下载"></a>1.1镜像下载</h3><p><a target="_blank" rel="noopener" href="https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit">https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit</a></p>
+<p>在官网任选一类镜像下载即可</p>
+<h3 id="1-2镜像烧写"><a href="#1-2镜像烧写" class="headerlink" title="1.2镜像烧写"></a>1.2镜像烧写</h3><p>所需工具：高速SD卡（&gt;4G），读卡器，SD卡格式化程序SD Card Formatter，镜像烧写程序Win32DiskImager.exe。</p>
+<p>步骤：将SD卡插入读卡器后插入电脑，若SD内容不为空，建议使用SD格式化程序格式化下，随后使用烧写程序，选择好待烧写镜像和待烧写的磁盘位置。Write开始烧写。</p>
+<p>![image-20210912191837250](C:\Users\Zhao haojie\AppData\Roaming\Typora\typora-user-images\image-20210912191837250.png)</p>
+<h3 id="1-3配置ssh"><a href="#1-3配置ssh" class="headerlink" title="1.3配置ssh"></a>1.3配置ssh</h3><p>当我们没有树莓派屏幕时，许多操作需要通过远程访问的方式进行，ssh就是一种很好的方式。<br>镜像烧写完成后，进入树莓派磁盘目录，创建一个空文件ssh，此时，ssh就配置完成了，树莓派上电启动后，会自动加载vncserver服务端程序，我们只需用客户端连接即可。</p>
+<h3 id="1-4配置wifi连接"><a href="#1-4配置wifi连接" class="headerlink" title="1.4配置wifi连接"></a>1.4配置wifi连接</h3><p>同样进入树莓派磁盘目录，创建一个文件wpa_supplicant.conf，其中内容为：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev</span><br><span class="line">update_config=<span class="number">1</span></span><br><span class="line">network=&#123;</span><br><span class="line">ssid=<span class="string">&quot;WiFi的名称&quot;</span></span><br><span class="line">psk=<span class="string">&quot;WiFi密码&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将以上字段写入文件中，填写好wifi的账号密码，保存。此时无线网络配置完成，当树莓派上电起来后，会自动使用该配置连接wifi。</p>
+<h3 id="1-5配置静态IP"><a href="#1-5配置静态IP" class="headerlink" title="1.5配置静态IP"></a>1.5配置静态IP</h3><p>当树莓派上电后连接wifi后，树莓派IP地址实际为DHCP动态分配的，该地址会发生变化，因此配置一个静态的IP还是很重要的。</p>
+<h4 id="1-5-1临时IP获取"><a href="#1-5-1临时IP获取" class="headerlink" title="1.5.1临时IP获取"></a>1.5.1临时IP获取</h4><p>要想配置静态IP，实际需要修改/etc/dhcpcd.conf文件，这个就没有办法通过树莓派磁盘创建文件实现了。需要进入树莓派终端修改该文件，我们可以通过前面已经配置好的ssh进行访问。至于此时的动态IP如何获取，有两种方法：一、访问192.168.0.1或192.168.1.1进入路由器管理界面查询树莓派的IP，然后使用该IP进行ssh登录。二、使用Advanced_IP_Scanner程序扫描当前连接wifi的局域网IP，如下图。</p>
+<p>![image-20210912194945985](C:\Users\Zhao haojie\AppData\Roaming\Typora\typora-user-images\image-20210912194945985.png)</p>
+<p>这样就能得到此时分配给树莓派的动态IP了。</p>
+<h4 id="1-5-2静态IP设置"><a href="#1-5-2静态IP设置" class="headerlink" title="1.5.2静态IP设置"></a>1.5.2静态IP设置</h4><p>ssh登录树莓派终端，新烧录镜像的树莓派使用默认的账号密码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">账户：pi</span><br><span class="line">密码：raspberry</span><br></pre></td></tr></table></figure>
+
+<p>终端输入vi /etc/dhcpcd.conf，在文件末尾添加以下字段：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#wifi需要设置wlan0,有线网则是eth0</span></span><br><span class="line">interface wlan0</span><br><span class="line"><span class="keyword">static</span> ip_address=<span class="number">192.168</span><span class="number">.0</span><span class="number">.99</span>/<span class="number">24</span>   #静态IP地址</span><br><span class="line"><span class="keyword">static</span> routers=<span class="number">192.168</span><span class="number">.0</span><span class="number">.1</span>          #路由器地址</span><br><span class="line"><span class="keyword">static</span> domain_name_servers=<span class="number">192.168</span><span class="number">.0</span><span class="number">.1</span>  #DNS地址</span><br></pre></td></tr></table></figure>
+
+<p>保存后重启，静态IP生效。</p>
+<h3 id="1-6配置VNC"><a href="#1-6配置VNC" class="headerlink" title="1.6配置VNC"></a>1.6配置VNC</h3><p>当你没有显示屏时，VNC则可以作为远程桌面来显示树莓派桌面。树莓派官方镜像默认是集成了VNC服务端功能，只不过是没有使能而已，因此我们使能后，以后便可以使用该功能了。</p>
+<p>树莓派终端输入：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo raspi-config</span><br></pre></td></tr></table></figure>
+<p>出现以下图形配置界面，选择interface options<br>![image-20210912201609712](C:\Users\Zhao haojie\AppData\Roaming\Typora\typora-user-images\image-20210912201609712.png)</p>
+<p>选择VNC选项，使能VNC功能</p>
+<p>![image-20210912201726361](C:\Users\Zhao haojie\AppData\Roaming\Typora\typora-user-images\image-20210912201726361.png)</p>
+<p>使能成功后，最后Finsh结束即可。</p>
+<p>树莓派集成的是VNC服务端，而我们需要客户端来远程连接并显示桌面，这里推荐realVNC客户端。</p>
+<h3 id="1-7配置FTP"><a href="#1-7配置FTP" class="headerlink" title="1.7配置FTP"></a>1.7配置FTP</h3><p>FTP是File Transfer Protocol（文件传输协议的英文简称，用于Internet上的控制文件的双向传输。这里主要是用来传输文件，虽然ssh也可以传输文件，但我还是觉得ftp更快速方便些。</p>
+<p>安装FTP服务端：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install vsftpd</span><br></pre></td></tr></table></figure>
+
+<p>修改vsftpd配置文件/etc/vsftpd.conf，添加以下字段</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">local_enable=YES</span><br><span class="line">write_enable=YES</span><br></pre></td></tr></table></figure>
+
+<p>最后重新启动FTP服务器</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service vsftpd restart</span><br></pre></td></tr></table></figure>
+
+<p>最后推荐一个好用的FTP客户端软件，FileZilla，谁用谁知道。</p>
+<h3 id="1-8配置samba"><a href="#1-8配置samba" class="headerlink" title="1.8配置samba"></a>1.8配置samba</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zlllg/article/details/88547648">https://blog.csdn.net/zlllg/article/details/88547648</a></p>
+<p>先安装必要软件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install samba samba-common-bin</span><br></pre></td></tr></table></figure>
+
+<p>修改samba的配置文件，在路径/etc/samba/smb.conf**</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/samba/smb.conf</span><br></pre></td></tr></table></figure>
+
+<p>在文件最后，增加以下字段</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># ======================</span><br><span class="line">[MyPi]           #共享文件的名称， 将在网络上以此名称显示</span><br><span class="line">path = /home/pi/Desktop/         #共享文件的路径，我们默认使用桌面文件夹</span><br><span class="line">valid users = pi        #允许访问的用户</span><br><span class="line">browseable = yes        #允许浏览</span><br><span class="line"><span class="keyword">public</span> = yes        #共享开放</span><br><span class="line">writable = yes        #可写</span><br></pre></td></tr></table></figure>
+
+<p>重新启动一下我们的samba服务</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo samba restart</span><br></pre></td></tr></table></figure>
+
+<p>添加登陆账户并创建密码，必须是 linux 已存在的用户</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo smbpasswd -a pi</span><br></pre></td></tr></table></figure>
+
+<p>此时，window下映射网络驱动器即可</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\\<span class="number">192.168</span><span class="number">.0</span><span class="number">.99</span>\Mypi\</span><br></pre></td></tr></table></figure>
+
+<p>输入账号密码pi  /pi即可</p>
+<h2 id="2-Vscode远程开发"><a href="#2-Vscode远程开发" class="headerlink" title="2.Vscode远程开发"></a>2.Vscode远程开发</h2><p>步骤：</p>
+<p>进入vscode，ctrl+shift+p进入输入框，输入remote,选择remote ssh安装。</p>
+<p>其余略</p>
+<h2 id="3-树莓派基础库"><a href="#3-树莓派基础库" class="headerlink" title="3.树莓派基础库"></a>3.树莓派基础库</h2><h3 id="3-1GPIO-Zero"><a href="#3-1GPIO-Zero" class="headerlink" title="3.1GPIO Zero"></a>3.1GPIO Zero</h3><p>库地址：<a target="_blank" rel="noopener" href="https://github.com/gpiozero/gpiozero">https://github.com/gpiozero/gpiozero</a></p>
+<p>文档地址<a target="_blank" rel="noopener" href="https://gpiozero.readthedocs.io/en/stable/">https://gpiozero.readthedocs.io/en/stable/</a></p>
+<p>教程：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Naisu_kun/article/details/105288110">https://blog.csdn.net/Naisu_kun/article/details/105288110</a></p>
+<p>安装：sudo apt install python3-gpiozero</p>
+<h3 id="3-2vcgencmd"><a href="#3-2vcgencmd" class="headerlink" title="3.2vcgencmd"></a>3.2vcgencmd</h3><p>用于查看树莓派系统资源</p>
+<p>vcgencmd commands查看支持什么命令。</p>
+<h2 id="4-树莓派摄像头"><a href="#4-树莓派摄像头" class="headerlink" title="4.树莓派摄像头"></a>4.树莓派摄像头</h2><p>使用raspi-config开启摄像头功能，树莓派摄像主要提供两个命令以供使用。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">raspistill</span><br><span class="line">raspivid</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-1视频查看"><a href="#4-1视频查看" class="headerlink" title="4.1视频查看"></a>4.1视频查看</h3><p>使用vlc查看</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#使用http协议</span><br><span class="line">raspivid -o - -t <span class="number">0</span> -vf -w <span class="number">800</span> -h <span class="number">400</span> -fps <span class="number">24</span>|cvlc -vvv stream:<span class="comment">///dev/stdin --sout &quot;#standard&#123;access=http,mux=ts,dst=:8080&#125;&quot; :demux=h264</span></span><br><span class="line">#使用rtsp协议</span><br><span class="line">raspivid -o - -t <span class="number">0</span> -vf -w <span class="number">800</span> -h <span class="number">400</span> -fps <span class="number">24</span>|cvlc -v stream:<span class="comment">///dev/stdin --sout &quot;#rtp&#123;sdp=rtsp://:8080/&#125; :demux=h264</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-Python编程"><a href="#5-Python编程" class="headerlink" title="5.Python编程"></a>5.Python编程</h2><p>附：问题记录</p>
+<p>1、vnc显示不全。</p>
+<p>vnc部分内容显示不全，sudo raspi-config 修改分辨率即可</p>
+<p>2、vi中上下键，删除键显示为英文字母。</p>
+<p>默认安装的vim-tiny,卸载安装完整版即可</p>
+<p>3、更换源</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 编辑 `/etc/apt/sources.<span class="built_in">list</span>` 文件，删除原文件所有内容，用以下内容取代：</span><br><span class="line">deb http:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi</span></span><br><span class="line">deb-src http:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi</span></span><br><span class="line"></span><br><span class="line"># 编辑 `/etc/apt/sources.<span class="built_in">list</span>.d/raspi.<span class="built_in">list</span>` 文件，删除原文件所有内容，用以下内容取代：</span><br><span class="line">deb http:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui</span></span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -257,7 +343,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/09/12/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BB%8E%E5%90%83%E7%81%B0%E5%88%B0%E5%90%83%E7%81%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -269,6 +355,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2021/10/01/%E7%A4%BE%E6%8B%9B%E7%A0%94%E7%A9%B6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          社招研究
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/08/29/Linux%E5%86%85%E6%A0%B8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux内核学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -319,7 +424,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

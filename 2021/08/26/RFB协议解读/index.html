@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>tags | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://example.com/tags/index.html">
+  <meta name="description" content="RFB解读对方的 红色 1.简介RFB（“远程帧缓冲区”）是一种用于远程访问图形用户界面的简单协议 2.显示在给定的 x,y 位置放置一个像素数据矩形 更新协议由客户端需求驱动。也就是说，更新仅从服务器发送到客户端以响应来自客户端的显式请求 3.屏幕模型支持单屏幕和多屏幕，但帧缓存区均只有一个 客户端可以更改帧缓存区大小和屏幕布局。服务器可以随意批准或拒绝这些请求，但必须始终将结果通知客户端。有关">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/08/26/RFB%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="RFB解读对方的 红色 1.简介RFB（“远程帧缓冲区”）是一种用于远程访问图形用户界面的简单协议 2.显示在给定的 x,y 位置放置一个像素数据矩形 更新协议由客户端需求驱动。也就是说，更新仅从服务器发送到客户端以响应来自客户端的显式请求 3.屏幕模型支持单屏幕和多屏幕，但帧缓存区均只有一个 客户端可以更改帧缓存区大小和屏幕布局。服务器可以随意批准或拒绝这些请求，但必须始终将结果通知客户端。有关">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-08-17T17:40:01.000Z">
-<meta property="article:modified_time" content="2021-08-17T17:44:54.499Z">
+<meta property="article:published_time" content="2021-08-25T16:49:39.006Z">
+<meta property="article:modified_time" content="2021-08-29T05:16:30.872Z">
 <meta property="article:author" content="Haojie Zhao">
 <meta name="twitter:card" content="summary">
   
@@ -158,27 +160,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="tags-" class="article article-type-tags " itemscope itemprop="blogPost">
+            <article id="post-RFB协议解读" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      tags
-    </h1>
-  
-
-        
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2021-08-17T17:40:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-18</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="RFB解读"><a href="#RFB解读" class="headerlink" title="RFB解读"></a>RFB解读</h1><p>对方的</p>
+<p><font color=red>红色</font></p>
+<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p>RFB（“远程帧缓冲区”）是一种用于远程访问图形用户界面的简单协议</p>
+<h2 id="2-显示"><a href="#2-显示" class="headerlink" title="2.显示"></a>2.显示</h2><p>在给定的 x,y 位置放置一个像素数据矩形</p>
+<p>更新协议由客户端需求驱动。也就是说，更新仅从服务器发送到客户端以响应来自客户端的显式请求</p>
+<h2 id="3-屏幕模型"><a href="#3-屏幕模型" class="headerlink" title="3.屏幕模型"></a>3.屏幕模型</h2><p>支持单屏幕和多屏幕，但帧缓存区均只有一个</p>
+<p>客户端可以更改帧缓存区大小和屏幕布局。服务器可以随意批准或拒绝这些请求，但必须始终将结果通知客户端。有关详细信息，请参阅 SetDesktopSize消息。</p>
+<h2 id="4-输入协议"><a href="#4-输入协议" class="headerlink" title="4.输入协议"></a>4.输入协议</h2><p>输入端基于键盘和多按钮指点设备的标准工作站模型。每当用户按下键或指针按钮时，或者每当移动指点设备时，客户端都会将输入事件简单地发送到服务器。这些输入事件也可以从其他非标准 I/O 设备合成</p>
+<h2 id="5-像素格式"><a href="#5-像素格式" class="headerlink" title="5.像素格式"></a>5.像素格式</h2><p>客户端和服务器之间的初始交互涉及发送像素数据的<font color=red>格式</font>和<font color=red>编码</font>的协商。</p>
+<p>像素<em>格式</em>是指通过像素值来表示单个颜色。最常见的像素格式是 24 位或 16 位“真彩色”，其中像素值中的位字段直接转换为红色、绿色和蓝色强度，以及 8 位“颜色图”，其中可以进行任意映射用于从像素值转换为 RGB 强度。</p>
+<p><em>编码</em>是指如何在线路上发送像素数据的矩形。像素数据的每个矩形都以标题为前缀，该标题给出了矩形在屏幕上的 X、Y 位置、矩形的宽度和高度，以及指定像素数据编码的<em>编码类型</em>。然后数据本身使用指定的编码。</p>
+<h2 id="6-协议消息"><a href="#6-协议消息" class="headerlink" title="6.协议消息"></a>6.协议消息</h2><p>RFB 协议可以在任何可靠的传输上运行，无论是字节流还是基于消息。通常，它通过 TCP/IP 连接使用。</p>
+<p>分为三个阶段：</p>
+<p>一、首先是握手阶段，其目的是就协议版本和要使用的安全类型达成一致。</p>
+<p>二、第二阶段是初始化阶段，客户端和服务器交换<em>ClientInit</em> 和<em>ServerInit</em>消息。</p>
+<p>三、最后阶段是正常的协议交互。</p>
+<p>客户端可以发送它想要的任何消息，因此可能会从服务器接收消息。所有这些消息都以<em>消息类型</em>字节开始，后跟任何特定于消息的数据。</p>
+<p>统一采用UTF-8字符串编码，所有多字节整数（像素值本身除外）都采用大端顺序（最重要的字节在前）。</p>
+<h3 id="6-1-握手"><a href="#6-1-握手" class="headerlink" title="6.1 握手"></a>6.1 握手</h3><h4 id="6-1-1-协议版本"><a href="#6-1-1-协议版本" class="headerlink" title="6.1.1 协议版本"></a>6.1.1 协议版本</h4><p>握手从服务器向客户端发送<em>ProtocolVersion</em> 消息开始。这让客户端知道服务器支持的最高 RFB 协议版本号。然后客户端回复一个类似的消息，给出应该实际使用的协议的版本号（可能与服务器引用的版本号不同）。</p>
+<p>该<em>ProtocolVersion</em>消息由格式为ASCII字符组成的12个字节组成的字符串构成，当前可能的版本有3.3，3.7，3.8。字符串为“RFB xxx.yyy\n<code>” ，其中</code>xxx<code>为主版本号，</code>yyy为次要版本号。</p>
+
       
 
       
@@ -257,7 +264,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/08/26/RFB%E5%8D%8F%E8%AE%AE%E8%A7%A3%E8%AF%BB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -269,6 +276,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2021/08/29/Linux%E5%86%85%E6%A0%B8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Linux内核学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/08/18/what/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">what</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -319,7 +345,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
